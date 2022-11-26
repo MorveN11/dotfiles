@@ -14,7 +14,8 @@ telescope.setup {
     mappings = {
       n = {
         ["q"] = actions.close
-      }, },
+      },
+    },
   },
   extensions = {
     file_browser = {
