@@ -58,6 +58,7 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
+alias vim='nvim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -126,10 +127,13 @@ function rmk(){
 
 # Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
 (( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
-source ~/Desktop/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
+
+PATH=~/.console-ninja/.bin:$PATH
+[ -f "/home/morven/.ghcup/env" ] && source "/home/morven/.ghcup/env" # ghcup-env
