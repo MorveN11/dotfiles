@@ -53,6 +53,10 @@ return {
 				build = "make",
 			},
 			"nvim-telescope/telescope-file-browser.nvim",
+			{
+				"nvim-telescope/telescope-live-grep-args.nvim",
+				version = "^1.0.0",
+			},
 		},
 		keys = {
 			{

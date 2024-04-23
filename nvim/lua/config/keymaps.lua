@@ -29,7 +29,7 @@ keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- New tab
-keymap.set("n", "te", ":tabedit")
+keymap.set("n", "te", ":tabedit<CR>", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
@@ -54,10 +54,14 @@ keymap.set("n", "<C-j>", function()
 	vim.diagnostic.goto_next()
 end, opts)
 
-keymap.set("n", "<leader>r", function()
-	require("util.hsl").replaceHexWithHSL()
-end)
+keymap.set("n", "<leader>r", ":LspRestart<CR>", opts)
 
-keymap.set("n", "<leader>i", function()
-	require("util.lsp").toggleInlayHints()
-end)
+-- Move Line Down
+keymap.set("n", "<C-S-Down>", ":m+1<CR>", opts)
+-- Move Line UP
+keymap.set("n", "<C-S-Up>", ":m-2<CR>", opts)
+
+-- Move Line Down Visual and Keep Selection
+keymap.set("v", "<C-S-Down>", ":m'>+1<CR>gv", opts)
+-- Move Line UP Visual and Keep Selection
+keymap.set("v", "<C-S-Up>", ":m'<-2<CR>gv", opts)
