@@ -1,0 +1,36 @@
+layout {
+    tab name="code" focus=true {
+        pane 
+    }
+
+    tab name="terminal" {
+        pane
+    }
+
+   default_tab_template {
+      pane size=1 borderless=true {
+        plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+            format_left  "{mode}#[fg=black,bg=#c5c9c5,bold]{session}  #[fg=#c5c9c5,bg=#181616]{tabs}"
+            format_right "#[fg=#181616,bg=#c5c9c5]{datetime}"
+            format_space "#[bg=#181616]"
+
+            hide_frame_for_single_pane "true"
+
+            mode_normal  "#[bg=#c5c9c5] "
+
+            tab_normal              "#[fg=#181616,bg=#a6a69c] #[fg=#181616,bg=#a6a69c]{index}  {name} #[fg=#a6a69c,bg=#181616]"
+            tab_normal_fullscreen   "#[fg=#6C7086,bg=#181616] {index} {name} [] "
+            tab_normal_sync         "#[fg=#6C7086,bg=#181616] {index} {name} <> "
+            tab_active              "#[fg=#181616,bg=#ffffff,bold,italic] {index}  {name} #[fg=#ffffff,bg=#181616]"
+            tab_active_fullscreen   "#[fg=#9399B2,bg=#181616,bold,italic] {index} {name} [] "
+            tab_active_sync         "#[fg=#9399B2,bg=#181616,bold,italic] {index} {name} <> "
+
+
+            datetime          "#[fg=#181616,bg=#c5c9c5,bold] {format} "
+            datetime_format   "%A, %d %b %Y %H:%M"
+            datetime_timezone "America/La_Paz"
+        }
+      }
+      children
+   }
+}

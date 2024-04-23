@@ -1,0 +1,9 @@
+<application>
+  <component name="LafManager">
+    <laf themeId="4f556d32-83cb-4b8b-9932-c4eccc4ce3af" />
+    <lafs-to-previous-schemes>
+      <laf-to-scheme laf="Darcula" scheme="_@user_One Dark Italic" />
+      <laf-to-scheme laf="Monokai Pro (Filter Spectrum)" scheme="_@user_Monokai Pro (Filter Spectrum)" />
+    </lafs-to-previous-schemes>
+  </component>
+</application>

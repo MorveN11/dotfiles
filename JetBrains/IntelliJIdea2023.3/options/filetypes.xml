@@ -1,0 +1,22 @@
+<application>
+  <component name="FileTypeManager" version="19">
+    <ignoreFiles list="*$py.class;*.pyc;*.pyo;*.rbc;*.yarb;*~;.DS_Store;.git;.hg;.mypy_cache;.pytest_cache;.ruff_cache;.svn;CVS;__pycache__;_svn;vssver.scc;vssver2.scc" />
+    <extensionMap>
+      <mapping pattern="LICENSE" type="AUTO_DETECTED" />
+      <mapping ext="exec" type="PLAIN_TEXT" />
+      <removed_mapping ext="apk" approved="true" type="ARCHIVE" />
+      <removed_mapping ext="bat" approved="true" type="Bat" />
+      <removed_mapping ext="cmd" approved="true" type="Cmd" />
+      <removed_mapping ext="csv" approved="true" type="CSV/TSV" />
+      <removed_mapping ext="dockerignore" approved="true" type="DockerIgnore file" />
+      <removed_mapping ext="ignore" approved="true" type="IgnoreLang file" />
+      <removed_mapping ext="pdf" approved="true" type="Native" />
+      <removed_mapping ext="psd" approved="true" type="Image" />
+      <removed_mapping ext="sql" approved="true" type="OdpsQL" />
+      <removed_mapping ext="tsv" approved="true" type="CSV/TSV" />
+      <removed_mapping ext="txt" approved="true" type="PLAIN_TEXT" />
+      <mapping ext="odpsql" type="OdpsQL" />
+      <mapping ext="q" type="OdpsQL" />
+    </extensionMap>
+  </component>
+</application>

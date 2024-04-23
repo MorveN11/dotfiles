@@ -1,0 +1,13 @@
+<application>
+  <component name="KeyboardSettings">
+    <option name="enabled" value="true" />
+  </component>
+  <component name="UISettings">
+    <option name="compactTreeIndents" value="true" />
+    <option name="CONSOLE_COMMAND_HISTORY_LIMIT" value="100" />
+    <option name="MAX_LOOKUP_WIDTH2" value="1000" />
+    <option name="SEPARATE_MAIN_MENU" value="true" />
+    <option name="SHOW_MAIN_TOOLBAR" value="true" />
+    <option name="WIDESCREEN_SUPPORT" value="true" />
+  </component>
+</application>

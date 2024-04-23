@@ -1,0 +1,13 @@
+<application>
+  <component name="aeInstalledPlugins">
+    <option name="myPlugins">
+      <map>
+        <entry key="CheckStyle-IDEA" value="1709327147261" />
+        <entry key="com.chrisrm.idea.MaterialThemeUI" value="1709327147722" />
+        <entry key="com.github.copilot" value="1709327148051" />
+        <entry key="com.mallowigi" value="1709327148248" />
+        <entry key="izhangzhihao.rainbow.brackets" value="1709327148711" />
+      </map>
+    </option>
+  </component>
+</application>

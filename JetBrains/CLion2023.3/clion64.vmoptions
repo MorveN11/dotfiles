@@ -1,0 +1,4 @@
+-Xmx2048m
+-Dide.managed.by.toolbox=/home/morven/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
+-Dtoolbox.notification.token=94321972-610c-4467-a4cf-941bc8a22469
+-Dtoolbox.notification.portFile=/home/morven/.cache/JetBrains/Toolbox/ports/2138634515.port
