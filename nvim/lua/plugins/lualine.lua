@@ -1,15 +1,15 @@
 local colors = {
-	bg = "#181616",
-	fg = "#bbc2cf",
-	yellow = "#ECBE7B",
-	cyan = "#008080",
-	darkblue = "#081633",
-	green = "#7FB4CA",
-	orange = "#FF8800",
-	violet = "#a9a1e1",
-	magenta = "#c678dd",
-	blue = "#c5c9c5",
-	red = "#ec5f67",
+	bg = "#0d0c0c",
+	fg = "#DCD7BA",
+	yellow = "#E6C384",
+	cyan = "#7FB4CA",
+	darkblue = "#2D4F67",
+	green = "#76946A",
+	orange = "#FFA066",
+	violet = "#938AA9",
+	magenta = "#7E9CD8",
+	blue = "#72A7BC",
+	red = "#FF5D62",
 }
 
 local conditions = {
@@ -166,7 +166,7 @@ ins_left({
 		return msg
 	end,
 	icon = " LSP:",
-	color = { fg = "#ffffff", gui = "bold" },
+	color = { fg = colors.fg, gui = "bold" },
 })
 
 -- Add components to right sections
