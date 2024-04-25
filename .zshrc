@@ -107,11 +107,11 @@ _fzf_compgen_dir() {
 
 # --- setup fzf theme ---
 bg="#0d0c0c"
-bg_highlight="#16161D"
+bg_highlight="#303030"
 fg="#DCD7BA"
-hl="#FFA066"
-info="#72A7BC"
-pointer="#76946A"
+hl="#b99d6a"
+info="#738fc6"
+pointer="#708c64"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${hl},fg+:${fg},bg+:${bg_highlight},hl+:${hl},info:${info},prompt:${pointer},pointer:${pointer},marker:${pointer},spinner:${pointer},header:${pointer}"
 
