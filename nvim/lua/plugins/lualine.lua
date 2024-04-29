@@ -1,5 +1,5 @@
 local colors = {
-	bg = "#0d0c0c",
+	bg = "#181616",
 	fg = "#DCD7BA",
 	yellow = "#E6C384",
 	cyan = "#7FB4CA",

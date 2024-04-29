@@ -16,6 +16,7 @@ return {
 				"bash",
 				"html",
 				"json",
+				"jsonc",
 				"lua",
 				"markdown",
 				"markdown_inline",

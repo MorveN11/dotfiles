@@ -35,6 +35,13 @@ return {
 		end,
 		opts = {
 			inlay_hints = { enabled = false },
+			ensure_installed = {
+				"cssls",
+				"cssmodules_ls",
+				"bashls",
+				"csharp_ls",
+				"lua_ls",
+			},
 			---@type lspconfig.options
 			servers = {
 				cssls = {},

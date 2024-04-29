@@ -32,6 +32,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.java" },
 		{ import = "lazyvim.plugins.extras.lang.clangd" },
 		{ import = "lazyvim.plugins.extras.lang.cmake" },
+		{ import = "lazyvim.plugins.extras.lang.omnisharp" },
 		{ import = "lazyvim.plugins.extras.lang.haskell" },
 		{ import = "lazyvim.plugins.extras.lang.markdown" },
 		{ import = "lazyvim.plugins.extras.lang.python" },
@@ -40,15 +41,15 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.rust" },
 		{ import = "lazyvim.plugins.extras.lang.tailwind" },
 		{ import = "lazyvim.plugins.extras.coding.copilot" },
+		{ import = "lazyvim.plugins.extras.lang.go" },
+		{ import = "lazyvim.plugins.extras.lang.python" },
+		{ import = "lazyvim.plugins.extras.lang.yaml" },
 		{ import = "lazyvim.plugins.extras.util.mini-hipatterns" },
 		{ import = "plugins" },
 	},
 	defaults = {
 		lazy = false,
 		version = false,
-	},
-	dev = {
-		path = "~/.ghq/github.com",
 	},
 	checker = { enabled = true },
 	performance = {

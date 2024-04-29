@@ -5,32 +5,11 @@ discipline.cowboy()
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- Do things without affecting the registers
-keymap.set("n", "x", '"_x')
-keymap.set("n", "<Leader>p", '"0p')
-keymap.set("n", "<Leader>P", '"0P')
-keymap.set("v", "<Leader>p", '"0p')
-keymap.set("n", "<Leader>c", '"_c')
-keymap.set("n", "<Leader>C", '"_C')
-keymap.set("v", "<Leader>c", '"_c')
-keymap.set("v", "<Leader>C", '"_C')
-keymap.set("n", "<Leader>d", '"_d')
-keymap.set("n", "<Leader>D", '"_D')
-keymap.set("v", "<Leader>d", '"_d')
-keymap.set("v", "<Leader>D", '"_D')
-
 -- Delete a word backwards
 keymap.set("n", "dw", 'vb"_d')
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
-
--- Disable continuations
-keymap.set("n", "<Leader>o", "o<Esc>^Da", opts)
-keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
-
--- Jumplist
-keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- New tab
 keymap.set("n", "te", ":tabedit<CR>", opts)
@@ -58,14 +37,23 @@ keymap.set("n", "<C-j>", function()
 	vim.diagnostic.goto_next()
 end, opts)
 
-keymap.set("n", "<leader>r", ":LspRestart<CR>", opts)
+keymap.set("n", "<C-S-j>", function()
+	vim.diagnostic.goto_prev()
+end, opts)
 
--- Move Line Down
+-- Move Line Down Up
 keymap.set("n", "<C-S-Down>", ":m+1<CR>", opts)
--- Move Line UP
 keymap.set("n", "<C-S-Up>", ":m-2<CR>", opts)
 
--- Move Line Down Visual and Keep Selection
+-- Move Line Down Up Visual and Keep Selection
 keymap.set("v", "<C-S-Down>", ":m'>+1<CR>gv", opts)
--- Move Line UP Visual and Keep Selection
 keymap.set("v", "<C-S-Up>", ":m'<-2<CR>gv", opts)
+
+-- Go to the end beginning of the line
+keymap.set("n", "<C-l>", "$", opts)
+keymap.set("n", "<C-h>", "^", opts)
+
+-- Oil Setup
+local oil = require("oil")
+oil.setup()
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

@@ -32,7 +32,4 @@ return {
 			end,
 		},
 	},
-	{
-		"xiyaowong/transparent.nvim",
-	},
 }
