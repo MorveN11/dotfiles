@@ -4,16 +4,26 @@ return {
 		"williamboman/mason.nvim",
 		opts = function(_, opts)
 			vim.list_extend(opts.ensure_installed, {
+				"angular-language-server",
+				"astro-language-server",
 				"stylua",
 				"selene",
 				"luacheck",
 				"shellcheck",
 				"shfmt",
+				"flake8",
 				"tailwindcss-language-server",
 				"typescript-language-server",
 				"css-lsp",
 				"markdownlint",
 				"marksman",
+				"sqlls",
+				"sqlfluff",
+				"sql-formatter",
+				"emmet-language-server",
+				"editorconfig-checker",
+				"sonarlint-language-server",
+				"clang-format",
 			})
 		end,
 	},
@@ -36,6 +46,8 @@ return {
 		opts = {
 			inlay_hints = { enabled = false },
 			ensure_installed = {
+				"angularls",
+				"astro",
 				"cssls",
 				"cssmodules_ls",
 				"bashls",

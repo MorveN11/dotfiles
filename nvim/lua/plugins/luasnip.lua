@@ -5,12 +5,6 @@ return {
 		or nil,
 	dependencies = {
 		{
-			"rafamadriz/friendly-snippets",
-			config = function()
-				require("luasnip.loaders.from_vscode").lazy_load()
-			end,
-		},
-		{
 			"nvim-cmp",
 			dependencies = {
 				"saadparwaiz1/cmp_luasnip",

@@ -88,7 +88,7 @@ return {
 				desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
 			},
 			{
-				"\\\\",
+				";b",
 				function()
 					local builtin = require("telescope.builtin")
 					builtin.buffers()
@@ -255,7 +255,10 @@ return {
 		"xeluxee/competitest.nvim",
 		dependencies = "MunifTanjim/nui.nvim",
 		config = function()
-			require("competitest").setup()
+			require("competitest").setup({
+				testcases_use_single_file = true,
+				testcases_directory = "./testcases",
+			})
 		end,
 	},
 }

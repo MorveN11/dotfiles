@@ -6,6 +6,7 @@ return {
 		build = ":TSUpdate",
 		opts = {
 			ensure_installed = {
+				"angular",
 				"astro",
 				"asm",
 				"cmake",
@@ -13,8 +14,10 @@ return {
 				"c",
 				"c_sharp",
 				"css",
+				"csv",
 				"bash",
 				"html",
+				"http",
 				"json",
 				"jsonc",
 				"lua",
@@ -30,6 +33,11 @@ return {
 				"haskell",
 				"java",
 				"sql",
+				"tsx",
+				"javascript",
+				"typescript",
+				"xml",
+				"graphql",
 			},
 
 			-- matchup = {

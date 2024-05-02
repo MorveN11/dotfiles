@@ -56,4 +56,26 @@ keymap.set("n", "<C-h>", "^", opts)
 -- Oil Setup
 local oil = require("oil")
 oil.setup()
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- Neogen Setup
+keymap.set("n", "<leader>ng", ":lua require('neogen').generate()<CR>", opts)
+
+-- Refactoring Setup
+keymap.set({ "n", "x" }, "<leader>rr", function()
+	require("refactoring").select_refactor()
+end, { desc = "Select refactoring" })
+
+-- Competitive programming Setup
+keymap.set("n", "<leader>pr", ":CompetiTest run<CR>", opts)
+keymap.set("n", "<leader>pa", ":CompetiTest add_testcase<CR>", opts)
+keymap.set("n", "<leader>pp", ":CompetiTest receive problem<CR>", opts)
+keymap.set("n", "<leader>pe", ":CompetiTest edit_testcase", { desc = "Edit the test" })
+keymap.set("n", "<leader>pd", ":CompetiTest delete_testcase", { desc = "Delete the test" })
+keymap.set("n", "<leader>ps", ":CompetiTest show_ui<CR>", opts)
+
+-- Rest Setup
+keymap.set("n", "<leader>h", ":Rest run<CR>", opts)
+
+-- DBUI Setup
+keymap.set("n", "<leader>d", ":DBUIToggle<CR>", opts)

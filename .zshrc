@@ -1,3 +1,6 @@
+# Bottom bar
+printf "\e[H\ec\e[${LINES}B"
+
 # Initialize Zellij at start
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
@@ -19,6 +22,7 @@ fi
 # oh-my-zsh with powerlevel10k
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL10K_MODE="nerdfont-complete"
 
 plugins=(
   git
@@ -26,14 +30,13 @@ plugins=(
   web-search
   zsh-autosuggestions
   zsh-syntax-highlighting
-  )
+  zsh-github-copilot
+)
 
 source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Bottom bar
-printf "\e[H\ec\e[${LINES}B"
-
+# Function to clear terminal
 function my-clear {
   clear && printf "\e[H\ec\e[${LINES}B"
   zle && zle .reset-prompt && zle -R
@@ -44,6 +47,7 @@ bindkey '^L' my-clear
 
 # Aliases
 alias vim='nvim'
+alias open='xdg-open'
 
 # Bindkeys
 bindkey "^[[H" beginning-of-line
@@ -86,6 +90,9 @@ export GOPATH=$HOME/go
 # Ruby
 export PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin
 
+# perl
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+
 # Setup fzf
 eval "$(fzf --zsh)"
 
@@ -106,7 +113,7 @@ _fzf_compgen_dir() {
 }
 
 # --- setup fzf theme ---
-bg="#0d0c0c"
+bg="#181616"
 bg_highlight="#303030"
 fg="#DCD7BA"
 hl="#b99d6a"
@@ -150,3 +157,7 @@ eval $(thefuck --alias fk)
 # Set zoxide instead cd
 eval "$(zoxide init zsh)"
 alias cd="z"
+
+# Set Copilot bind key
+bindkey '^\' zsh_gh_copilot_explain  # bind Ctrl+\ to explain
+bindkey '^[\' zsh_gh_copilot_suggest  # bind Alt+\ to suggest

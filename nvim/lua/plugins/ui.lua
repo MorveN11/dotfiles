@@ -76,9 +76,9 @@ return {
 		opts = {
 			options = {
 				mode = "tabs",
-				-- separator_style = "slant",
-				show_buffer_close_icons = true,
-				show_close_icon = true,
+				separator_style = "slant",
+				show_buffer_close_icons = false,
+				show_close_icon = false,
 			},
 		},
 	},
@@ -107,23 +107,10 @@ return {
 					end
 
 					local icon, color = require("nvim-web-devicons").get_icon_color(filename)
-					return { { icon, guifg = color }, { " " }, { filename } }
+					return { { icon, guifg = color }, { " " }, { filename, gui = "bold" } }
 				end,
 			})
 		end,
-	},
-
-	{
-		"folke/zen-mode.nvim",
-		cmd = "ZenMode",
-		opts = {
-			plugins = {
-				gitsigns = true,
-				tmux = true,
-				kitty = { enabled = false, font = "+2" },
-			},
-		},
-		keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
 	},
 
 	{
@@ -142,5 +129,25 @@ return {
 			opts.config.header = vim.split(logo, "\n")
 		end,
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
+	},
+
+	-- DB Manager
+	{
+		"kristijanhusak/vim-dadbod-ui",
+		dependencies = {
+			{ "tpope/vim-dadbod", lazy = true },
+			{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+		},
+
+		cmd = {
+			"DBUI",
+			"DBUIToggle",
+			"DBUIAddConnection",
+			"DBUIFindBuffer",
+		},
+
+		init = function()
+			vim.g.db_ui_use_nerd_fonts = 1
+		end,
 	},
 }
