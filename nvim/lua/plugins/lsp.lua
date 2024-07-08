@@ -24,6 +24,11 @@ return {
 				"editorconfig-checker",
 				"sonarlint-language-server",
 				"clang-format",
+				"checkstyle",
+				"google-java-format",
+				"pylint",
+				"black",
+				"taplo",
 			})
 		end,
 	},
@@ -56,6 +61,7 @@ return {
 			},
 			---@type lspconfig.options
 			servers = {
+				taplo = {},
 				cssls = {},
 				tailwindcss = {
 					root_dir = function(...)

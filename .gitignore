@@ -50,3 +50,10 @@ VirtualBox.back
 thefuck
 gh/
 gh-copilot/
+LunaModeler/
+Luna Modeler/
+  "vim.vimrc.path": "~/.vimrc",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "home/linuxbrew/.linuxbrew/bin/nvim",
+  "vim.neovimConfigPath": "~/.config/nvim/init.lua",
+  "vim.neovimUseConfigFile": true,

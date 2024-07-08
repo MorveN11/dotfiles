@@ -89,6 +89,7 @@ return {
 		event = "BufReadPre",
 		priority = 1200,
 		config = function()
+			local helpers = require("incline.helpers")
 			require("incline").setup({
 				highlight = {
 					groups = {
@@ -96,7 +97,10 @@ return {
 						InclineNormalNC = { guifg = "#181616", guibg = "#dcd7ba" },
 					},
 				},
-				window = { margin = { vertical = 0, horizontal = 1 } },
+				window = {
+					padding = 0,
+					margin = { horizontal = 0 },
+				},
 				hide = {
 					cursorline = true,
 				},
@@ -107,7 +111,14 @@ return {
 					end
 
 					local icon, color = require("nvim-web-devicons").get_icon_color(filename)
-					return { { icon, guifg = color }, { " " }, { filename, gui = "bold" } }
+					local buffer = {
+						{ " ", icon, " ", guibg = color, guifg = helpers.contrast_color(color) },
+						{ " " },
+						{ filename, gui = "bold" },
+						{ " " },
+					}
+
+					return buffer
 				end,
 			})
 		end,
