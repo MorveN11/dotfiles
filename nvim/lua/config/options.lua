@@ -32,6 +32,7 @@ vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.loaded_ruby_provider = 0
+vim.opt.clipboard = "unnamedplus"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

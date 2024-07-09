@@ -1,3 +1,8 @@
+if vim.g.vscode then
+	require("vscodenvim.init")
+	return
+end
+
 if vim.loader then
 	vim.loader.enable()
 end
@@ -5,6 +10,6 @@ end
 _G.dd = function(...)
 	require("util.debug").dump(...)
 end
-vim.print = _G.dd
 
+vim.print = _G.dd
 require("config.lazy")
