@@ -14,23 +14,23 @@ layout {
    default_tab_template {
       pane size=1 borderless=true {
         plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-            format_left  "#[bg=#DCD7BA]{mode}#[fg=#181616,bg=#DCD7BA,bold]{session} #[fg=#DCD7BA,bg=#181616]{tabs}"
-            format_right "#[fg=#181616,bg=#DCD7BA]{datetime}"
-            format_space "#[bg=#181616]"
+            format_left  "#[bg=#ABB2BF]{mode}#[fg=#282C34,bg=#ABB2BF,bold]{session} #[fg=#ABB2BF,bg=#282C34]{tabs}"
+            format_right "#[fg=#282C34,bg=#ABB2BF]{datetime}"
+            format_space "#[bg=#282C34]"
 
             hide_frame_for_single_pane "true"
 
-            mode_normal  "#[bg==#DCD7BA] "
+            mode_normal  "#[bg==#ABB2BF] "
 
-            tab_normal              "#[fg=#181616,bg=#727169] #[fg=#181616,bg=#727169]{index}  {name} #[fg=#727169,bg=#181616]"
-            tab_normal_fullscreen   "#[fg=#7FB4CA,bg=#181616] {index} {name} [] "
-            tab_normal_sync         "#[fg=#7FB4CA,bg=#181616] {index} {name} <> "
-            tab_active              "#[fg=#181616,bg=#7FB4CA,bold,italic] {index}  {name} #[fg=#7FB4CA,bg=#181616]"
-            tab_active_fullscreen   "#[fg=#7AA89F,bg=#181616,bold,italic] {index} {name} [] "
-            tab_active_sync         "#[fg=#7AA89F,bg=#181616,bold,italic] {index} {name} <> "
+            tab_normal              "#[fg=#282C34,bg=#727169] #[fg=#282C34,bg=#727169]{index}  {name} #[fg=#727169,bg=#282C34]"
+            tab_normal_fullscreen   "#[fg=#56B6C2,bg=#282C34] {index} {name} [] "
+            tab_normal_sync         "#[fg=#56B6C2,bg=#282C34] {index} {name} <> "
+            tab_active              "#[fg=#282C34,bg=#56B6C2,bold,italic] {index}  {name} #[fg=#56B6C2,bg=#282C34]"
+            tab_active_fullscreen   "#[fg=#98C379,bg=#282C34,bold,italic] {index} {name} [] "
+            tab_active_sync         "#[fg=#98C379,bg=#282C34,bold,italic] {index} {name} <> "
 
 
-            datetime          "#[fg=#181616,bg=#DCD7BA,bold] {format} "
+            datetime          "#[fg=#282C34,bg=#ABB2BF,bold] {format} "
             datetime_format   "%A, %d %b %Y %H:%M"
             datetime_timezone "America/La_Paz"
         }

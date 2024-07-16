@@ -5,14 +5,25 @@ printf "\e[H\ec\e[${LINES}B"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 alias zwork='zellij attach work'
+alias zcode='zellij attach code'
 
 if [[ -z "$ZELLIJ" ]]; then
-    zwork
+    if [[ "$MY_TERMINAL" == "kitty" ]]; then
+    # Kitty-specific configuration
+      zwork
+    elif [[ "$MY_TERMINAL" == "vscode" ]]; then
+    # VS Code-specific configuration
+    # zcode
+    fi
 
     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
         exit
     fi
 fi
+
+# Define TERM
+export TERM=xterm-kitty
+unset ZSH_AUTOSUGGEST_USE_ASYNC
 
 # Enable Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -25,7 +36,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL10K_MODE="nerdfont-complete"
 
 plugins=(
-  git
+  #git
   sudo
   web-search
   zsh-autosuggestions
@@ -56,9 +67,13 @@ bindkey "^[[3~" delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-# Local Pathhs
+# Local Paths
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/home/morven/bin"
+
+# DotNet
+export ASPNETCORE_Kestrel__Certificates__Default__Password="JoManuPa11"
+export ASPNETCORE_Kestrel__Certificates__Default__Path="/home/morven/.certs/localhost.pfx"
 
 # Console ninja
 PATH=~/.console-ninja/.bin:$PATH
@@ -72,23 +87,28 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
 
 # bun completions
 [ -s "/home/morven/.bun/_bun" ] && source "/home/morven/.bun/_bun"
 
+# cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# setup JAVA_HOME
+export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-21.0.3.0.9-1.fc40.x86_64"
+
+# setup CATALINE
+export CATALINA_BASE="/opt/tomcat"
 
 # Nix installer
 if [ -e /home/morven/.nix-profile/etc/profile.d/nix.sh ]; then . /home/morven/.nix-profile/etc/profile.d/nix.sh; fi 
 
 # Go
 export GOPATH=$HOME/go
-
-# Ruby
-export PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin
 
 # perl
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
@@ -113,12 +133,12 @@ _fzf_compgen_dir() {
 }
 
 # --- setup fzf theme ---
-bg="#181616"
-bg_highlight="#303030"
-fg="#DCD7BA"
-hl="#b99d6a"
-info="#738fc6"
-pointer="#708c64"
+bg="#282c34"
+bg_highlight="#5c6370"
+fg="#abb2bf"
+hl="#e5c07b"
+info="#56b6c2"
+pointer="#98c379"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${hl},fg+:${fg},bg+:${bg_highlight},hl+:${hl},info:${info},prompt:${pointer},pointer:${pointer},marker:${pointer},spinner:${pointer},header:${pointer}"
 
@@ -144,7 +164,7 @@ _fzf_comprun() {
 source ~/Desktop/repos/fzf-git/fzf-git.sh
 
 # Set bat instead cat
-export BAT_THEME=kanagawa
+export BAT_THEME=TwoDark
 alias cat='bat'
 
 # Set eza instead ls

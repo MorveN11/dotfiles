@@ -93,8 +93,8 @@ return {
 			require("incline").setup({
 				highlight = {
 					groups = {
-						InclineNormal = { guibg = "#181616", guifg = "#dcd7ba" },
-						InclineNormalNC = { guifg = "#181616", guibg = "#dcd7ba" },
+						InclineNormal = { guibg = "#282c34", guifg = "#abb2bf" },
+						InclineNormalNC = { guifg = "#282c34", guibg = "#abb2bf" },
 					},
 				},
 				window = {

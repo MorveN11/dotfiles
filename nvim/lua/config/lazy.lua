@@ -17,7 +17,7 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "kanagawa-dragon",
+				colorscheme = "onedark",
 				news = {
 					lazyvim = true,
 					neovim = true,
@@ -36,6 +36,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.json" },
 		{ import = "lazyvim.plugins.extras.lang.markdown" },
 		{ import = "lazyvim.plugins.extras.lang.omnisharp" },
+		{ import = "lazyvim.plugins.extras.lang.prisma" },
 		{ import = "lazyvim.plugins.extras.lang.python" },
 		{ import = "lazyvim.plugins.extras.lang.ruby" },
 		{ import = "lazyvim.plugins.extras.lang.rust" },
