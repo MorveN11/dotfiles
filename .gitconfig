@@ -1,0 +1,25 @@
+[init]
+	defaultBranch = main
+[user]
+	name = MorveN11
+    email = morales.patty.jose@gmail.com
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    navigate = true
+    side-by-side = true
+    line-numbers = true
+
+[delta "interactive"]
+    keep-plus-minus-markers = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default

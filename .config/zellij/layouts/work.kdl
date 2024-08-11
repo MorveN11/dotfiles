@@ -1,0 +1,34 @@
+layout {
+  tab name="code" cwd="/home/morven/code" focus=true {
+      pane
+  }
+
+  tab name="terminal" cwd="/home/morven/code" {
+      pane
+  }
+
+  tab name="server" cwd="/home/morven" {
+      pane
+  }
+
+  default_tab_template {
+      pane size=1 borderless=true {
+        plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+            hide_frame_for_single_pane "true"
+
+            format_left         "#[bg=#DCD7BA] {mode}#[fg=#1F1F28,bg=#DCD7BA]{session} #[fg=#DCD7BA,bg=#1F1F28]{tabs}"
+            format_right        "#[fg=#1F1F28,bg=#DCD7BA]{datetime}"
+            format_space        "#[bg=#1F1F28]"
+
+            tab_normal          "#[fg=#1F1F28,bg=#dcd7ba] #[fg=#1F1F28,bg=#dcd7ba]{index}  {name} #[fg=#dcd7ba,bg=#1F1F28]"
+            tab_active              "#[fg=#1F1F28,bg=#e6c384,italic] {index}  {name} #[fg=#e6c384,bg=#1F1F28]"
+
+            datetime            "#[fg=#1F1F28,bg=#DCD7BA] {format} "
+            datetime_format     "%A, %d %b %Y %H:%M"
+            datetime_timezone   "America/La_Paz"
+        }
+      }
+
+      children
+  }
+}

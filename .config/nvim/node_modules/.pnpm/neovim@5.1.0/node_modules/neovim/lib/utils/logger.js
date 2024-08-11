@@ -1,0 +1,84 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getLogger = void 0;
+const winston = __importStar(require("winston"));
+const node_util_1 = require("node:util");
+const level = process.env.NVIM_NODE_LOG_LEVEL || 'debug';
+function getFormat(colorize) {
+    return winston.format.combine(winston.format.splat(), winston.format.timestamp({
+        format: 'YYYY-MM-DD HH:mm:ss',
+    }), winston.format.printf(info => {
+        let msg;
+        try {
+            msg =
+                typeof info.message === 'object'
+                    ? (0, node_util_1.inspect)(info.message, false, 2, colorize)
+                    : info.message;
+        }
+        catch (_a) {
+            msg = info.message;
+        }
+        const lvl = info.level === 'debug' ? 'DBG' : info.level.slice(0, 3).toUpperCase();
+        return `${info.timestamp} ${lvl} ${msg}`;
+    }));
+}
+function setupWinstonLogger() {
+    const logger = winston.createLogger({
+        level,
+    });
+    if (process.env.NVIM_NODE_LOG_FILE) {
+        logger.add(new winston.transports.File({
+            filename: process.env.NVIM_NODE_LOG_FILE,
+            level,
+            format: getFormat(false),
+        }));
+    }
+    if (process.env.ALLOW_CONSOLE) {
+        logger.add(new winston.transports.Console({
+            format: getFormat(true),
+        }));
+    }
+    if (!process.env.NVIM_NODE_LOG_FILE && !process.env.ALLOW_CONSOLE) {
+        // Silent logger is necessary to avoid 'Attempt to write logs with no transports' error
+        logger.add(new winston.transports.Console({ silent: true }));
+    }
+    // Monkey-patch `console` so that it does not write to the RPC (stdio) channel.
+    Object.keys(console).forEach((k) => {
+        console[k] = function () {
+            // eslint-disable-next-line prefer-rest-params
+            logger[k === 'log' ? 'info' : k].apply(logger, arguments);
+        };
+    });
+    return logger;
+}
+let _logger; // singleton
+function getLogger() {
+    if (!_logger) {
+        _logger = setupWinstonLogger();
+    }
+    return _logger;
+}
+exports.getLogger = getLogger;

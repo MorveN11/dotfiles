@@ -1,0 +1,16 @@
+/* ---- Configuration ---- */
+configuration {
+    modi:                       "drun";
+    font:                       "Inter 12";
+    show-icons:                 true;
+    icon-theme:                 "Papirus-Dark";
+    display-drun:               "Apps";
+	drun-display-format:        "{icon} {name}";
+    hover-select:               false;
+    scroll-method:              1;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+    window-format:              "{w} · {c} · {t}";
+}
+
+@theme "~/.config/rofi/themes/kanagawa.rasi"

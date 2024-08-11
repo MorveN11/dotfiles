@@ -1,0 +1,164 @@
+{
+    "layer": "top",
+    "width": 1890,
+    "margin-top": 15,
+    "margn-bottom": 0,
+
+    "modules-left": [
+        "custom/launcher",
+        "cpu",
+        "memory",
+        "temperature",
+        "power-profiles-daemon",
+        "custom/dunst",
+        "hyprland/language",
+        "tray"
+    ],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["backlight", "wireplumber", "network", "bluetooth", "battery", "clock", "custom/power"],
+
+    "custom/launcher": {
+        "tooltip": false,
+        "format": "<span color='#7fb4ca' font='14'></span>",
+        "on-click": "rofi -show drun"
+    },
+
+    "cpu": {
+        "tooltip": false,
+        "format": "<span color='#c34043'>    </span>{}%",
+        "max-length": 10
+    },
+
+    "memory": {
+        "tooltip": false,
+        "format": "<span color='#7fb4ca'>    </span>{used}GiB",
+        "max-length": 10
+    },
+
+    "temperature": {
+        "tooltip": false,
+        "format": "<span color='#e6c384'>  </span>{temperatureC}°C",
+        "max-length": 10
+    },
+
+    "power-profiles-daemon": {
+        "tooltip": false,
+        "format": "{icon}     {profile}",
+
+        "format-icons": {
+            "default": "<span color='#c34043'></span>",
+            "performance": "<span color='#c34043'></span>",
+            "balanced": "<span color='#e6c384'></span>",
+            "power-saver": "<span color='#7aa89f'></span>"
+        }
+    },
+
+    "custom/dunst": {
+        "tooltip": false,
+        "format": "<span color='#e6c384'>{}</span>",
+        "return-type": "json",
+        "on-click": "dunstctl set-paused toggle",
+        "exec": "~/.config/waybar/scripts/dunst.sh"
+    },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "en",
+        "format-es": "es"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 15,
+        "show-passive-items": true
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "on-click": "activate",
+        "all-outputs": true,
+        "active-only": false,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        },
+        "format": "<span font='11' weight='800'>{}</span>",
+        "format-icons": {
+            "active": "",
+            "empty": "",
+            "persistent": ""
+        }
+    },
+
+    "backlight": {
+        "tooltip": false,
+        "format": "<span color='#e6c384'>   </span>{}%",
+        "on-click-right": "light -U 5",
+        "on-click": "light -A 5",
+        "on-scroll-up": "light -A 5",
+        "on-scroll-down": "light -U 5"
+    },
+
+    "wireplumber": {
+        "tooltip": false,
+        "format": "<span color='#7fb4ca'>{icon}     </span>{volume}%",
+        "on-click": "pavucontrol &",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5,
+        "format-muted": "<span color='#c34043'>    </span>{volume}%",
+        "format-icons": ["", "", ""]
+    },
+
+    "network": {
+        "tooltip": false,
+        "format-wifi": "<span color='#7aa89f'>     </span>{essid}",
+        "format-ethernet": "<span color='#7aa89f'>     </span>{ipaddr}",
+        "format-disconnected": "<span color='#7fb4ca'>󰀂     </span>enabled",
+        "on-click": "nm-connection-editor &"
+    },
+
+    "bluetooth": {
+        "tooltip": false,
+        "format-connected": "<span color='#7aa89f'>   </span>connected",
+        "format-on": "<span color='#7fb4ca'>   </span>enabled",
+        "format-off": "<span color='#c34043'>   </span>disabled",
+        "format-disabled": "<span color='#c34043'>   </span>disabled",
+        "on-click": "blueman-manager &"
+    },
+
+    "battery": {
+        "tooltip": false,
+        "interval": 5,
+        "states": {
+            "warning": 30,
+            "critical": 10
+        },
+
+        "format": "{icon}     {capacity}%",
+        "format-charging": "<span color='#7aa89f'></span>   {capacity}%",
+        "format-plugged": "<span color='#7aa89f'></span>   {capacity}%",
+        "format-icons": [
+            "<span color='#c34043'></span>",
+            "<span color='#e6c384'></span>",
+            "<span color='#e6c384'></span>",
+            "<span color='#7aa89f'></span>",
+            "<span color='#7aa89f'></span>"
+        ]
+    },
+
+    "clock": {
+        "tooltip": true,
+        "format": "{:%H:%M %p}",
+        "tooltip-format": "{:%Y-%m-%d}",
+        "on-click": "gnome-calendar &"
+    },
+
+    "custom/power": {
+        "tooltip": false,
+        "format": "<span color='#c34043'>⏻</span>",
+        "on-click": "wlogout"
+    }
+}

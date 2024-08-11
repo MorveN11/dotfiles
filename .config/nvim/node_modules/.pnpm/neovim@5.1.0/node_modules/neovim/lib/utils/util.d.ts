@@ -1,0 +1,15 @@
+/**
+ * Clones an object (copies "own properties") until `depth`, where:
+ * - depth=0 returns non-object value, or empty object (`{}` or `[]`).
+ * - depth=1 returns `obj` with its immediate children (but not their children).
+ * - depth=2 returns `obj` with its children and their children.
+ * - and so on...
+ *
+ * TODO: node's `util.inspect()` function is better, but doesn't work in web browser?
+ *
+ * @param obj Object to clone.
+ * @param depth
+ * @param omitKeys Omit properties matching these names (at any depth).
+ * @param replacement Replacement for object whose fields extend beyond `depth`, and properties matching `omitKeys`.
+ */
+export declare function partialClone(obj: any, depth?: number, omitKeys?: string[], replacement?: any): any;

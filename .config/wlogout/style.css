@@ -1,0 +1,60 @@
+* {
+    font-family: 'Inter';
+    font-size: 20px;
+    transition: 0.2ms;
+    transition-timing-function: ease-in-out;
+    background-image: none;
+    box-shadow: none;
+}
+
+window {
+    background: url('background.jpg');
+    background-size: cover;
+}
+
+button {
+    margin: 10px;
+    border-radius: 20px;
+
+    background-position: center;
+    background-size: 25%;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    border: 3px solid #1f1f28;
+    background-color: rgba(31, 31, 40, 0.2);
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:focus,
+button:active,
+button:hover {
+    border: 3px solid #dcd7ba;
+    background-color: rgba(31, 31, 40, 0.8);
+}
+
+#lock {
+    background-image: image(url('icons/lock.png'));
+}
+
+#logout {
+    background-image: image(url('icons/logout.png'));
+}
+
+#suspend {
+    background-image: image(url('icons/suspend.png'));
+}
+
+#hibernate {
+    background-image: image(url('icons/hibernate.png'));
+}
+
+#shutdown {
+    background-image: image(url('icons/shutdown.png'));
+}
+
+#reboot {
+    background-image: image(url('icons/reboot.png'));
+}
