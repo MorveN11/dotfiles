@@ -1,5 +1,4 @@
 -- Nvim Options
-
 vim.opt.shell = "fish"
 
 vim.g.mapleader = " "

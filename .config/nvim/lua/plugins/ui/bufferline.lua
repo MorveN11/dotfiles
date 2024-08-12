@@ -1,5 +1,4 @@
 -- Buffer line: Tabs Management
-
 return {
     "akinsho/bufferline.nvim",
 

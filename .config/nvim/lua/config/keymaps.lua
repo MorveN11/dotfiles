@@ -1,5 +1,4 @@
 -- Nvim Keymaps
-
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
@@ -45,6 +44,11 @@ keymap.set("n", "<leader>pr", ":CompetiTest run<CR>", opts)
 keymap.set("n", "<leader>pa", ":CompetiTest add_testcase<CR>", opts)
 keymap.set("n", "<leader>pp", ":CompetiTest receive problem<CR>", opts)
 keymap.set("n", "<leader>ps", ":CompetiTest show_ui<CR>", opts)
+
+-- Obsidian: Notes Management Setup
+keymap.set("n", "<leader>oo", ":ObsidianOpen<CR>", { desc = "Open in Obsidian App" })
+keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "Create New Note" })
+keymap.set("n", "<leader>oq", ":ObsidianQuickSwitch<CR>", { desc = "Search Obsidian Quick Switch" })
 
 -- Diagnostics Movement
 keymap.set("n", "<C-j>", function()

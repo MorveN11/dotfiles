@@ -1,5 +1,4 @@
 --  Competitive Programming
-
 return {
     "xeluxee/competitest.nvim",
 

@@ -1,5 +1,4 @@
 -- Oil Files and Folders Management
-
 return {
     "stevearc/oil.nvim",
 

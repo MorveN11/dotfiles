@@ -1,5 +1,4 @@
 -- Lazy git plugin configuration
-
 return {
     "kdheepak/lazygit.nvim",
 

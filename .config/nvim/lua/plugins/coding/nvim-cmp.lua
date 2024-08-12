@@ -1,5 +1,4 @@
 -- Emojis completion
-
 return {
     "nvim-cmp",
 

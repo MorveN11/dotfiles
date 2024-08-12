@@ -1,5 +1,4 @@
 -- LSP Servers Configuration
-
 return {
     "neovim/nvim-lspconfig",
 

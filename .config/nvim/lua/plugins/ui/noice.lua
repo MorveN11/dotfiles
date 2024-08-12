@@ -1,5 +1,4 @@
 -- Command Line
-
 return {
     "folke/noice.nvim",
     opts = function(_, opts)

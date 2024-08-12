@@ -1,5 +1,4 @@
 -- This file is used to configure the telescope plugin.
-
 return {
     "telescope.nvim",
 

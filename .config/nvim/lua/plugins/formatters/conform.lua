@@ -1,5 +1,4 @@
 -- Setup Formatters for Conform
-
 return {
     "stevearc/conform.nvim",
 

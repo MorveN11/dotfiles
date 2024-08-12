@@ -1,5 +1,4 @@
 -- Top Right File Name and Icon
-
 return {
     "b0o/incline.nvim",
 

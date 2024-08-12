@@ -1,5 +1,4 @@
 -- Status bottom line
-
 local colors = {
     white = "#1F1F28",
     black = "#DCD7BA",

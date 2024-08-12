@@ -1,5 +1,4 @@
 -- This file is used to configure the nvim-treesitter plugin
-
 return {
     "nvim-treesitter/nvim-treesitter",
 

@@ -1,5 +1,4 @@
--- Mason Language Server
-
+-- Mason Language Servers
 return {
     "williamboman/mason.nvim",
 

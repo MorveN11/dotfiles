@@ -1,5 +1,4 @@
 -- Disable initial Dashboard image
-
 return {
     "nvimdev/dashboard-nvim",
 

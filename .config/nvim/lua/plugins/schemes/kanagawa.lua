@@ -1,5 +1,4 @@
 -- Kanagawa Color Scheme
-
 return {
     "rebelot/kanagawa.nvim",
 

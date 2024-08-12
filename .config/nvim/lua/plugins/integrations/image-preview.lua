@@ -1,5 +1,4 @@
 -- Image preview
-
 return {
     "adelarsq/image_preview.nvim",
 

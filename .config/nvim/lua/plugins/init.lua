@@ -1,5 +1,4 @@
 -- Init plugins file
-
 return {
     { import = "plugins.coding" },
     { import = "plugins.editor" },

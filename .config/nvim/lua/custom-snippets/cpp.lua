@@ -1,5 +1,4 @@
 -- Cpp Custom Snippets
-
 local fmt = require("luasnip.extras.fmt").fmt
 local snippet = require("luasnip").snippet
 local insert = require("luasnip").insert_node

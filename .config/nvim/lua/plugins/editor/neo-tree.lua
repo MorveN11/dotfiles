@@ -1,5 +1,4 @@
 -- NeoTree configuration
-
 return {
     "nvim-neo-tree/neo-tree.nvim",
 
@@ -10,8 +9,6 @@ return {
     },
 
     opts = {
-        hide_root_node = true,
-
         default_component_configs = {
             git_status = {
                 symbols = {
