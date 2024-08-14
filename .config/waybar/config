@@ -11,6 +11,7 @@
         "temperature",
         "power-profiles-daemon",
         "custom/dunst",
+        "idle_inhibitor",
         "hyprland/language",
         "tray"
     ],
@@ -59,6 +60,15 @@
         "return-type": "json",
         "on-click": "dunstctl set-paused toggle",
         "exec": "~/.config/waybar/scripts/dunst.sh"
+    },
+
+    "idle_inhibitor": {
+        "tootip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "<span color='#7aa89f'></span>",
+            "deactivated": "<span color='#c34043'></span>"
+        }
     },
 
     "hyprland/language": {

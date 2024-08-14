@@ -5,8 +5,8 @@ return {
     event = "VeryLazy",
 
     keys = {
-        { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
-        { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
+        { "<Tab>", "<CMD>BufferLineCycleNext<CR>", desc = "Next tab" },
+        { "<S-Tab>", "<CMD>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },
 
     opts = {

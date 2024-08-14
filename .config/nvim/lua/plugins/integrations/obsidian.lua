@@ -20,11 +20,11 @@ return {
             min_chars = 2,
         },
 
-        notes_subdir = "inbox",
-        new_notes_location = "inbox",
+        notes_subdir = "nuevos",
+        new_notes_location = "nuevos",
 
         attachments = {
-            img_folder = "attachments",
+            img_folder = "archivos-adjuntos",
         },
 
         dayli_notes = {
