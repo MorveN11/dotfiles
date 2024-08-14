@@ -48,12 +48,6 @@
     background: #1f1f28;
 }
 
-#idle_inhibitor {
-    margin: 6px 6px 6px 0px;
-    padding: 0px 22px 0px 15px;
-    background: #1f1f28;
-}
-
 #language {
     margin: 6px 6px 6px 0px;
     padding: 0px 15px;
@@ -100,6 +94,12 @@
 }
 
 /* Right Side */
+
+#idle_inhibitor {
+    margin: 6px 0px 6px 0px;
+    padding: 0px 22px 0px 15px;
+    background: #1f1f28;
+}
 
 #backlight {
     margin: 6px 0 6px 6px;

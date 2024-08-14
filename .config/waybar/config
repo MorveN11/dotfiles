@@ -11,12 +11,20 @@
         "temperature",
         "power-profiles-daemon",
         "custom/dunst",
-        "idle_inhibitor",
         "hyprland/language",
         "tray"
     ],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["backlight", "wireplumber", "network", "bluetooth", "battery", "clock", "custom/power"],
+    "modules-right": [
+        "idle_inhibitor",
+        "backlight",
+        "wireplumber",
+        "network",
+        "bluetooth",
+        "battery",
+        "clock",
+        "custom/power"
+    ],
 
     "custom/launcher": {
         "tooltip": false,
@@ -62,15 +70,6 @@
         "exec": "~/.config/waybar/scripts/dunst.sh"
     },
 
-    "idle_inhibitor": {
-        "tootip": false,
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "<span color='#7aa89f'></span>",
-            "deactivated": "<span color='#c34043'></span>"
-        }
-    },
-
     "hyprland/language": {
         "format": "{}",
         "format-en": "en",
@@ -100,6 +99,15 @@
             "active": "",
             "empty": "",
             "persistent": ""
+        }
+    },
+
+    "idle_inhibitor": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "<span color = '#7aa89f'></span>",
+            "deactivated": "<span color = '#c34043'></span>"
         }
     },
 
