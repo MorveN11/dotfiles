@@ -11,6 +11,8 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 -- Go to the end beginning of the line
 keymap.set("n", "<C-l>", "$")
 keymap.set("n", "<C-h>", "^")
+keymap.set("v", "<C-l>", "$")
+keymap.set("v", "<C-h>", "^")
 
 -- Move window
 keymap.set("n", "sh", "<C-w>h")
@@ -38,6 +40,7 @@ keymap.set("n", "tq", "<CMD>tabclose<CR>", { desc = "Close Tab" })
 keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open File Manager" })
 
 -- Compitest: Competitive Programming Setup
+keymap.set("n", "<leader>p", "", { desc = "competitive programming" })
 keymap.set("n", "<leader>pe", "<CMD>CompetiTest edit_testcase<CR>", { desc = "Edit Testcase" })
 keymap.set("n", "<leader>pd", "<CMD>CompetiTest delete_testcase<CR>", { desc = "Delete Testcase" })
 keymap.set("n", "<leader>pr", "<CMD>CompetiTest run<CR>", { desc = "Run TestCases" })
@@ -46,6 +49,7 @@ keymap.set("n", "<leader>pp", "<CMD>CompetiTest receive problem<CR>", { desc = "
 keymap.set("n", "<leader>po", "<CMD>CompetiTest show_ui<CR>", { desc = "Show UI" })
 
 -- Obsidian: Notes Management Setup
+keymap.set("n", "<leader>o", "", { desc = "obsidian" })
 keymap.set("n", "<leader>oo", "<CMD>ObsidianOpen<CR>", { desc = "Open in Obsidian App" })
 keymap.set("n", "<leader>on", "<CMD>ObsidianNew<CR>", { desc = "Create New Note" })
 keymap.set("n", "<leader>os", "<CMD>ObsidianQuickSwitch<CR>", { desc = "Search Obsidian Quick Switch" })

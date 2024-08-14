@@ -3,7 +3,7 @@ return {
     "neovim/nvim-lspconfig",
 
     opts = {
-        inlay_hints = { enabled = false },
+        inlay_hints = { enabled = true },
 
         servers = {
             yamlls = {
@@ -15,24 +15,37 @@ return {
             },
 
             omnisharp = {
-                cmd = {
-                    "dotnet",
-                    "/home/morven/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll",
-                },
-
                 settings = {
                     FormattingOptions = {
                         EnableEditorConfigSupport = true,
                         OrganizeImports = true,
                     },
+
                     MsBuild = {
                         LoadProjectsOnDemand = true,
                     },
+
                     RoslynExtensionsOptions = {
                         EnableAnalyzersSupport = true,
-                        EnableImportCompletion = true,
-                        AnalyzeOpenDocumentsOnly = true,
+                        EnableImportCompletion = nil,
+                        AnalyzeOpenDocumentsOnly = nil,
+
+                        InlayHintsOptions = {
+                            EnableForParameters = true,
+                            ForLiteralParameters = true,
+                            ForIndexerParameters = true,
+                            ForObjectCreationParameters = true,
+                            ForOtherParameters = true,
+                            SuppressForParametersThatDifferOnlyBySuffix = false,
+                            SuppressForParametersThatMatchMethodIntent = false,
+                            SuppressForParametersThatMatchArgumentName = false,
+                            EnableForTypes = true,
+                            ForImplicitVariableTypes = true,
+                            ForLambdaParameterTypes = true,
+                            ForImplicitObjectCreation = true,
+                        },
                     },
+
                     Sdk = {
                         IncludePrereleases = true,
                     },
@@ -99,11 +112,6 @@ return {
 
                         hint = {
                             enable = true,
-                            setType = false,
-                            paramType = true,
-                            paramName = "Disable",
-                            semicolon = "Disable",
-                            arrayIndex = "Disable",
                         },
 
                         doc = {
