@@ -1,0 +1,13 @@
+[SddmGreeterTheme]
+Name=custom-sddm-theme
+Description=custom-sddm-theme
+Author=MorveN11
+Type=sddm-theme
+Version=1.0
+Website=https://github.com/MorveN11/dotfiles
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Theme-Id=custom-sddm-theme
+Theme-API=2.0
+QtVersion=6
