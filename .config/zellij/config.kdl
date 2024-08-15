@@ -71,13 +71,29 @@ keybinds clear-defaults=true {
     }
 
     scroll {
-        bind "Alt s" { SwitchToMode "Normal"; }
+        bind "Alt f" { SwitchToMode "Normal"; }
         bind "k" "Up" { ScrollUp; }
         bind "j" "Down" { ScrollDown; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
+    }
+
+    search {
+        bind "n" { Search "down"; }
+        bind "p" { Search "up"; }
+        bind "k" "Up" { ScrollUp; }
+        bind "j" "Down" { ScrollDown; }
+        bind "d" { HalfPageScrollDown; }
+        bind "u" { HalfPageScrollUp; }
+        bind "c" { SearchToggleOption "CaseSensitivity"; }
+        bind "o" { SearchToggleOption "WholeWord"; }
+    }
+
+    entersearch {
+        bind "Alt c" "Esc" { SwitchToMode "Scroll"; }
+        bind "Enter" { SwitchToMode "Search"; }
     }
 
     session {
@@ -114,7 +130,7 @@ keybinds clear-defaults=true {
     }
 
     shared_except "scroll" "locked" {
-        bind "Alt s" { SwitchToMode "Scroll"; }
+        bind "Alt f" { SwitchToMode "Scroll"; }
     }
 
     shared_except "session" "locked" {
