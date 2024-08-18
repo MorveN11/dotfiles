@@ -8,7 +8,7 @@ return {
         "competitive",
         fmt(
             [[
-#ifdef LOCAL
+#ifdef LOCALDEB
 #include "/home/morven/code/competitive-programming/conf/debug.h"
 #define line cerr << "-------------------" << endl;
 #else
@@ -35,25 +35,6 @@ using namespace std;
 #define ensp(i, n) (" \n"[i == n - 1])
 #define spne(i) (" \n"[i == 0])
 
-template <typename... T>
-void cinn(T &...args) {{
-    ((cin >> args), ...);
-}}
-
-template <typename... T>
-void coutt(const T &...args) {{
-    __typeof(sizeof...(T)) i = 1;
-    ((cout << args << (i++ != sizeof...(T) ? " " : "")), ...);
-    cout << '\n';
-}}
-
-template <typename T>
-void couts(const T &xs) {{
-    for (__typeof(xs.sz()) i = 0; i < xs.sz(); i++) {{
-        cout << xs[i] << " \n"[i == xs.sz() - 1];
-    }}
-}}
-
 using ll = long long;
 using ld = long double;
 using lli = long long int;
@@ -74,15 +55,14 @@ using pq = priority_queue<T>;
 template <class T>
 using pqg = priority_queue<T, vector<T>, greater<T>>;
 
-const ll INF = INT64_MAX;
-const int inf = INT32_MAX;
+const ll INF = LONG_LONG_MAX;
+const int inf = INT_MAX;
 const ld PI = acos(-1);
-const lli MOD = 1e9 + 7;
 const vector<int> DX{{1, 0, -1, 0}}, DY{{0, 1, 0, -1}};
 ll testId = 0;
 
 void _() {{
-    ios::sync_with_stdio(0);
+    ios::sync_with_stdio(false);
     cin.tie(0);
     cout.tie(0);
 #ifdef LOCAL
@@ -113,10 +93,8 @@ int main() {{
     return 0;
 }}
 
-const ll MAXN = 202020;
-{}
 void init() {{}}
-
+{}
 void solve() {{}}
     ]],
             { insert(0) }
