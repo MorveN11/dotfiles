@@ -78,6 +78,7 @@ local config = {
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
             "neo-tree",
+            "copilot-chat",
         },
     },
 

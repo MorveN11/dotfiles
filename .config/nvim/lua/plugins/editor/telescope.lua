@@ -128,6 +128,9 @@ return {
                     ["n"] = {
                         ["N"] = fb_actions.create,
                         ["h"] = fb_actions.goto_parent_dir,
+                        ["/"] = function()
+                            vim.cmd("startinsert")
+                        end,
                         ["<C-u>"] = function(prompt_bufnr)
                             for _ = 1, 10 do
                                 actions.move_selection_previous(prompt_bufnr)
@@ -137,6 +140,12 @@ return {
                             for _ = 1, 10 do
                                 actions.move_selection_next(prompt_bufnr)
                             end
+                        end,
+                        ["<C-[>"] = function(prompt_bufnr)
+                            actions.move_to_top(prompt_bufnr)
+                        end,
+                        ["<C-]>"] = function(prompt_bufnr)
+                            actions.move_to_bottom(prompt_bufnr)
                         end,
                     },
                 },
