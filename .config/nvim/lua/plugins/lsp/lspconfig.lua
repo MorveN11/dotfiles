@@ -14,44 +14,6 @@ return {
                 },
             },
 
-            omnisharp = {
-                settings = {
-                    FormattingOptions = {
-                        EnableEditorConfigSupport = true,
-                        OrganizeImports = true,
-                    },
-
-                    MsBuild = {
-                        LoadProjectsOnDemand = true,
-                    },
-
-                    RoslynExtensionsOptions = {
-                        EnableAnalyzersSupport = true,
-                        EnableImportCompletion = nil,
-                        AnalyzeOpenDocumentsOnly = nil,
-
-                        InlayHintsOptions = {
-                            EnableForParameters = true,
-                            ForLiteralParameters = true,
-                            ForIndexerParameters = true,
-                            ForObjectCreationParameters = true,
-                            ForOtherParameters = true,
-                            SuppressForParametersThatDifferOnlyBySuffix = false,
-                            SuppressForParametersThatMatchMethodIntent = false,
-                            SuppressForParametersThatMatchArgumentName = false,
-                            EnableForTypes = true,
-                            ForImplicitVariableTypes = true,
-                            ForLambdaParameterTypes = true,
-                            ForImplicitObjectCreation = true,
-                        },
-                    },
-
-                    Sdk = {
-                        IncludePrereleases = true,
-                    },
-                },
-            },
-
             tailwindcss = {
                 root_dir = function(...)
                     return require("lspconfig.util").root_pattern(".git")(...)

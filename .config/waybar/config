@@ -33,21 +33,21 @@
     },
 
     "cpu": {
+        "interval": 3,
         "tooltip": false,
-        "format": "<span color='#c34043'>    </span>{}%",
-        "max-length": 10
+        "format": "<span color='#c34043'>    </span>{usage}%"
     },
 
     "memory": {
+        "interval": 3,
         "tooltip": false,
-        "format": "<span color='#7fb4ca'>    </span>{used}GiB",
-        "max-length": 10
+        "format": "<span color='#7fb4ca'>    </span>{used:0.2f}GiB"
     },
 
     "temperature": {
+        "interval": 3,
         "tooltip": false,
-        "format": "<span color='#e6c384'>  </span>{temperatureC}°C",
-        "max-length": 10
+        "format": "<span color='#e6c384'>  </span>{temperatureC}°C"
     },
 
     "power-profiles-daemon": {
@@ -149,7 +149,7 @@
 
     "battery": {
         "tooltip": false,
-        "interval": 5,
+        "interval": 3,
         "states": {
             "warning": 30,
             "critical": 10
@@ -168,9 +168,9 @@
     },
 
     "clock": {
-        "tooltip": true,
         "format": "{:%H:%M %p}",
         "tooltip-format": "{:%Y-%m-%d}",
+        "timezone": "America/La_Paz",
         "on-click": "gnome-calendar &"
     },
 

@@ -1,5 +1,6 @@
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
 [user]
 	name = MorveN11
     email = morales.patty.jose@gmail.com
@@ -23,3 +24,9 @@
 
 [diff]
     colorMoved = default
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

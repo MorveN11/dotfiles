@@ -3,22 +3,22 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- Delete a word backwards
-keymap.set("n", "dw", 'vb"_d')
+keymap.set("n", "dw", 'vb"_d', { desc = "Delete Word Backwards" })
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
 
 -- Go to the end beginning of the line
-keymap.set("n", "<C-l>", "$")
-keymap.set("n", "<C-h>", "^")
-keymap.set("v", "<C-l>", "$")
-keymap.set("v", "<C-h>", "^")
+keymap.set("n", "<C-l>", "$", { desc = "Go to the End of Line" })
+keymap.set("n", "<C-h>", "^", { desc = "Go to the Beginning of Line" })
+keymap.set("v", "<C-l>", "$", { desc = "Go to the End of Line" })
+keymap.set("v", "<C-h>", "^", { desc = "Go to the Beginning of Line" })
 
 -- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
+keymap.set("n", "sh", "<C-w>h", { desc = "Move Window Left" })
+keymap.set("n", "sk", "<C-w>k", { desc = "Move Window Up" })
+keymap.set("n", "sj", "<C-w>j", { desc = "Move Window Down" })
+keymap.set("n", "sl", "<C-w>l", { desc = "Move Window Right" })
 
 -- Move Line Down Up
 keymap.set("n", "<C-S-Down>", ":m .+1<CR>==", opts)
@@ -58,6 +58,7 @@ keymap.set("n", "<leader>os", "<CMD>ObsidianQuickSwitch<CR>", { desc = "Search O
 keymap.set("n", "<C-j>", function()
     vim.diagnostic.goto_next()
 end, opts)
+
 keymap.set("n", "<C-k>", function()
     vim.diagnostic.goto_prev()
 end, opts)

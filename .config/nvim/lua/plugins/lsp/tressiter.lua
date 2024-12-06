@@ -4,10 +4,8 @@ return {
 
     opts = {
         ensure_installed = {
-            "bash",
             "c",
             "cpp",
-            "c_sharp",
             "lua",
             "python",
             "javascript",
@@ -17,8 +15,6 @@ return {
             "css",
             "scss",
             "sql",
-            "graphql",
-            "http",
             "json",
             "jsonc",
             "xml",

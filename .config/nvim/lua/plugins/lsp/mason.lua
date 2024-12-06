@@ -11,9 +11,6 @@ return {
             "typescript-language-server",
             "css-lsp",
             "xmlformatter",
-            "csharpier",
-            "netcoredbg",
-            "omnisharp",
         })
     end,
 }

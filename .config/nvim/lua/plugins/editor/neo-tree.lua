@@ -35,7 +35,6 @@ return {
                 hide_by_name = {
                     ".git",
                     "node_modules",
-                    "coverage",
                     ".cache",
                     ".DS_Store",
                     "thumbs.db",

@@ -9,10 +9,10 @@ config.audible_bell = "Disabled"
 config.enable_tab_bar = false
 config.window_decorations = "NONE"
 config.window_padding = {
-    left = 15,
-    right = 15,
-    top = 15,
-    bottom = 15,
+    left = "1%",
+    right = "1%",
+    top = "2%",
+    bottom = "1%",
 }
 
 config.disable_default_key_bindings = true
@@ -38,6 +38,6 @@ config.font = wezterm.font_with_fallback({
     "Noto Color Emoji",
 })
 
-config.font_size = 14.0
+config.font_size = 16.0
 
 return config

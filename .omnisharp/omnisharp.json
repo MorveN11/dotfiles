@@ -1,0 +1,50 @@
+{
+    "FormattingOptions": {
+        "EnableEditorConfigSupport": true,
+        "OrganizeImports": true,
+        "NewLine": "\n",
+        "UseTabs": false,
+        "TabSize": 4,
+        "IndentationSize": 4,
+        "NewLinesForBracesInTypes": true,
+        "NewLinesForBracesInMethods": true,
+        "NewLinesForBracesInProperties": true,
+        "NewLinesForBracesInAccessors": true,
+        "NewLinesForBracesInControlBlocks": true,
+        "NewLinesForClausesInQuery": true
+    },
+    "MsBuild": {
+        "Enabled": true,
+        "LoadProjectsOnDemand": true,
+        "EnablePackageAutoRestore": true
+    },
+    "RoslynExtensionsOptions": {
+        "documentAnalysisTimeoutMs": 20000,
+        "EnableAnalyzersSupport": true,
+        "EnableImportCompletion": true,
+        "AnalyzeOpenDocumentsOnly": false,
+        "InlayHintsOptions": {
+            "EnableForParameters": true,
+            "ForLiteralParameters": true,
+            "ForIndexerParameters": true,
+            "ForObjectCreationParameters": true,
+            "ForOtherParameters": true,
+            "SuppressForParametersThatDifferOnlyBySuffix": false,
+            "SuppressForParametersThatMatchMethodIntent": false,
+            "SuppressForParametersThatMatchArgumentName": false,
+            "EnableForTypes": true,
+            "ForImplicitVariableTypes": true,
+            "ForLambdaParameterTypes": true,
+            "ForImplicitObjectCreation": true
+        }
+    },
+    "Sdk": {
+        "IncludePrereleases": true,
+        "Path": "/usr/share/dotnet/sdk/8.0.110",
+        "Version": "8.0.110"
+    },
+    "FileOptions": {
+        "SystemExcludeSearchPatterns": ["**/node_modules/**/*", "**/bin/**/*", "**/obj/**/*"],
+        "ExcludeSearchPatterns": []
+    }
+}

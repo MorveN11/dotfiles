@@ -1,0 +1,49 @@
+set nu
+set relativenumber
+set clipboard=unnamedplus
+set hlsearch
+set scrolloff=10
+set shell="fish"
+set breakindent
+set wrap
+set showcmd
+set ignorecase
+
+set commentary
+set highlightedyank
+set NERDTree
+
+let mapleader=" "
+nnoremap dw vb"_d
+nnoremap <C-a> gg<S-v>G
+
+nnoremap <C-l> $
+nnoremap <C-h> ^
+vnoremap <C-l> $
+vnoremap <C-h> ^
+
+nnoremap <leader>e :NERDTreeFocus<CR>
+
+nmap <leader>ca <Action>(ShowIntentionActions)
+nmap <leader>cr <Action>(RenameElement)
+
+nmap <C-S-Down> <Action>(MoveLineDown)
+nmap <C-S-Up> <Action>(MoveLineUp)
+vmap <C-S-Down> <Action>(MoveLineDown)
+vmap <C-S-Up> <Action>(MoveLineUp)
+
+nmap <tab> <Action>(NextTab)
+nmap <S-tab> <Action>(PreviousTab)
+
+nmap sv <Action>(SplitVertically)
+nmap sd <Action>(SplitHorizontally)
+nmap sl <Action>(NextSplitter)
+nmap sh <Action>(PrevSplitter)
+
+nmap <leader>xx <Action>(ActivateProblemsViewToolWindow)
+nmap <C-/> <Action>(ActivateTerminalToolWindow)
+nmap <leader>aa <Action>(copilot.chat.show)
+nmap <leader>np <Action>(ActivateNuGetToolWindow)
+
+nmap ;f <Action>(GotoClass)
+nmap ;r <Action>(FindInPath)
