@@ -22,24 +22,28 @@
     margin: 6px 6px 6px 0px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #memory {
     margin: 6px 6px 6px 0px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #temperature {
     margin: 6px 6px 6px 0px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #power-profiles-daemon {
     margin: 6px 6px 6px 0px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #custom-dunst {
@@ -52,6 +56,7 @@
     margin: 6px 6px 6px 0px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #tray {
@@ -105,36 +110,42 @@
     margin: 6px 0 6px 6px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #wireplumber {
     margin: 6px 0 6px 6px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #network {
     margin: 6px 0 6px 6px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #bluetooth {
     margin: 6px 0 6px 6px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #battery {
     margin: 6px 0 6px 6px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #clock {
     margin: 6px 0 6px 6px;
     padding: 0px 15px;
     background: #1f1f28;
+    color: #dcd7ba;
 }
 
 #custom-power {
