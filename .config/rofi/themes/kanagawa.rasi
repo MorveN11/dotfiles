@@ -32,7 +32,7 @@ mainbox {
     spacing:                      0px;
     margin:                       0px;
     background-color:             @background;
-    background-image:             url("/home/morven/wallpapers/rofi-background.jpeg");
+    background-image:             url("/home/morven/wallpapers/rofi-background.jpg");
     children:                     ["imagebox","listbox"];
 }
 
